@@ -5,8 +5,9 @@ public class NonRepeatingCharSubArray {
 
     public static void main(String[] args) {
 
-        String s = "aab";
+        String s = "pwwkew";
         System.out.println(lengthOfLongestSubstring(s));
+        System.out.println(getValue(s));
     }
 
     public static int lengthOfLongestSubstring(String s) {
@@ -36,5 +37,21 @@ public class NonRepeatingCharSubArray {
         }
         return max;
 
+    }
+
+
+    public static int getValue(String s){
+        String str = "";
+
+        for(int i = 0; i<s.length();i++) {
+            String ss = Character.toString(s.charAt(i));
+
+            if (str.contains(ss)) {
+                str = str.substring(str.indexOf(ss)+1);
+            }
+            str = str+ss;
+
+        }
+        return str.length();
     }
 }
