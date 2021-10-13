@@ -77,7 +77,6 @@ public class ZigZagConversion {
         {
             ss = ss + arr[i];
         }
-
         return ss;
     }
 }
