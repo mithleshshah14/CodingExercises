@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class MiddleLinkedList {
 
     LinkedNode headNode;
@@ -67,6 +69,7 @@ public class MiddleLinkedList {
         list.pushElement(5);
 
         int num = list.getMiddleElement();
+
         System.out.println(num);
     }
 
