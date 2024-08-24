@@ -16,32 +16,21 @@ public class AddTwoLinkedList {
             sum = carry + (l1 != null ? l1.data : 0)
                     + (l2 != null ? l2.data : 0);
 
-            // update carry for next calculation
             carry = (sum >= 10) ? 1 : 0;
 
-            // update sum if it is greater than 10
             sum = sum % 10;
 
-            // Create a new node with sum as data
             temp = new ListNode.Node(sum);
 
-            // if this is the first node then set
-            // it as head of the resultant list
             if (res == null) {
                 res = temp;
             }
-
-            // If this is not the first
-            // node then connect it to the rest.
             else {
                 prev.next = temp;
             }
 
-            // Set prev for next insertion
             prev = temp;
 
-            // Move first and second pointers
-            // to next nodes
             if (l1 != null) {
                 l1 = l1.next;
             }
