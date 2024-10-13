@@ -14,7 +14,6 @@ public class MaxProfit {
             val = Math.max(val,(l-r));
             if(prices[i]<r) {
                 r = prices[i];
-                l = prices[i];
             }
 
             l = prices[i];
